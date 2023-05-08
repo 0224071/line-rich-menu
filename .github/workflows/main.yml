@@ -27,7 +27,7 @@ jobs:
         run: |
           npm install
           npm run build 
-          
+          echo "action_state=yellow" >> ${{ secrets.ACCESS_TOKEN }}
       # Runs a single command using the runners shell
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
